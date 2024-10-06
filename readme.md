@@ -17,15 +17,19 @@ This project provides a Docker-based reverse proxy solution that allows you to e
 
 ### Pull the Docker image:
 
-`docker pull rajeevraj07/docker-reverse-proxy:latest`
+```
+docker pull rajeevraj07/docker-reverse-proxy:latest
+```
 
 ## Run the reverse proxy:
 
-`docker run \
+```
+docker run \
 -p 80:80 \
 -e MONGO_DB_URL=<url_of_your_mongodb_cluster> \
 -v /var/run/docker.sock:/var/run/docker.sock \
-rajeevraj07/docker-reverse-proxy:latest`
+rajeevraj07/docker-reverse-proxy:latest
+```
 
 #### Replace <url_of_your_mongodb_cluster> with your actual MongoDB cluster URL.
 
@@ -36,11 +40,13 @@ rajeevraj07/docker-reverse-proxy:latest`
 ### Example:
 
 Start a new container:
-`docker run --rm --name luffy -d nginx`
+```
+docker run --rm --name luffy -d nginx
+```
 
-Access the container:
-Open your web browser and navigate to http://luffy.localhost
-You should now see the default Nginx welcome page for the luffy container.
+## Access the container:
+- Open your web browser and navigate to http://luffy.localhost
+- You should now see the default Nginx welcome page for the luffy container.
 
 ## How It Works
 
